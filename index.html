@@ -1168,20 +1168,24 @@
     <p>&copy; Karibu Sana | Welcome</p>
   </footer>
 
-  <!-- Chatbot Floating Icon CSS -->
+<!-- Chatbot Floating Icon CSS -->
 <style>
   /* Chatbot Floating Icon */
   #chatbot-icon {
     position: fixed;
     bottom: 25px;
     right: 25px;
+    width: 50px;             /* smaller width */
+    height: 50px;            /* smaller height */
+    min-width: 50px;         /* prevent stretching */
+    min-height: 50px;        /* prevent stretching */
+    max-width: 50px;         /* prevent stretching */
+    max-height: 50px;        /* prevent stretching */
     background-color: #007bff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    border-radius: 50%;       /* perfect circle */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -1189,9 +1193,10 @@
   }
 
   #chatbot-icon svg {
+    width: 24px;              /* smaller icon */
+    height: 24px;             /* smaller icon */
     fill: #fff;
-    width: 30px;
-    height: 30px;
+    display: block;           /* prevent SVG stretching */
   }
 
   #chatbot-icon:hover {
@@ -1202,20 +1207,19 @@
   /* Custom Chat Container */
   #custom-chat-container {
     position: fixed;
-    bottom: 90px;  /* just above the icon */
+    bottom: 90px;  
     right: 25px;
     width: 350px;
     height: 450px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    display: none; /* hidden by default */
+    display: none;
     flex-direction: column;
     overflow: hidden;
     z-index: 1001;
   }
 
-  /* Chat Header */
   #custom-chat-header {
     background-color: #007bff;
     color: #fff;
@@ -1234,106 +1238,9 @@
     cursor: pointer;
   }
 
-  /* Chat Iframe Area */
   #custom-chat-frame {
     border: none;
     width: 100%;
     height: 100%;
   }
 </style>
-
-<!-- Botpress Scripts -->
-<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
-<script src="https://files.bpcontent.cloud/2025/09/08/10/20250908104323-DCJLJRV2.js" defer></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Section Navigation Functionality
-  const navLinks = document.querySelectorAll('.nav-link');
-  const quickLinks = document.querySelectorAll('.quick-link-card');
-  const contactBtn = document.querySelector('.contact-btn');
-  const showcaseLink = document.querySelector('.showcase-link');
-
-  function showSection(sectionId) {
-    document.querySelectorAll('.content-section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('data-target') === sectionId) {
-        link.classList.add('active');
-      }
-    });
-
-    document.querySelector('.container').scrollTop = 0;
-  }
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      showSection(this.getAttribute('data-target'));
-    });
-  });
-
-  quickLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      showSection(this.getAttribute('data-target'));
-    });
-  });
-
-  if (contactBtn) {
-    contactBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      showSection('contact');
-    });
-  }
-
-  if (showcaseLink) {
-    showcaseLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      showSection('showcase');
-    });
-  }
-
-  // Chatbot toggle functionality
-  const chatbotIcon = document.getElementById('chatbot-icon');
-  const chatContainer = document.getElementById('custom-chat-container');
-  const closeChat = document.getElementById('close-chat');
-  const chatFrame = document.getElementById('custom-chat-frame');
-
-  // Hide default Botpress widget
-  const hideBotpressWidget = setInterval(function() {
-    const bpWidgets = document.querySelectorAll('.bp-widget-widget, .bp-widget-side-button');
-    if (bpWidgets.length > 0) {
-      bpWidgets.forEach(widget => widget.style.display = 'none');
-      clearInterval(hideBotpressWidget);
-    }
-  }, 100);
-
-  // Toggle chat window
-  chatbotIcon.addEventListener('click', function() {
-    if (chatContainer.style.display === 'flex') {
-      chatContainer.style.display = 'none';
-    } else {
-      chatContainer.style.display = 'flex';
-      chatFrame.src = 'https://cdn.botpress.cloud/webchat/v3.2/webchat.html';
-    }
-  });
-
-  // Close chat window
-  closeChat.addEventListener('click', function() {
-    chatContainer.style.display = 'none';
-  });
-
-  // Close chat when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!chatContainer.contains(event.target) && 
-        !chatbotIcon.contains(event.target) && 
-        chatContainer.style.display === 'flex') {
-      chatContainer.style.display = 'none';
-    }
-  });
-});
-</script>

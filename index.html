@@ -1169,234 +1169,242 @@
   </footer>
 
 <!-- Chatbot Floating Icon CSS -->
-<style>
-  /* Chatbot Floating Icon */
-  #chatbot-icon {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #007bff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 1000;
-  }
+    <style>
+        /* Chatbot Floating Icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #007bff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            z-index: 1000;
+        }
 
-  #chatbot-icon svg {
-    fill: #fff;
-    width: 30px;
-    height: 30px;
-  }
+        #chatbot-icon svg {
+            fill: #fff;
+            width: 30px;
+            height: 30px;
+        }
 
-  #chatbot-icon:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-  }
+        #chatbot-icon:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
 
-  /* Custom Chat Container */
-  #custom-chat-container {
-    position: fixed;
-    bottom: 90px;  /* just above the icon */
-    right: 25px;
-    width: 350px;
-    height: 450px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    display: none; /* hidden by default */
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 1001;
-  }
+        /* Custom Chat Container */
+        #custom-chat-container {
+            position: fixed;
+            bottom: 90px;  /* just above the icon */
+            right: 25px;
+            width: 350px;
+            height: 450px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: none; /* hidden by default */
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1001;
+        }
 
-  /* Chat Header */
-  #custom-chat-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+        /* Chat Header */
+        #custom-chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  #custom-chat-header button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-  }
+        #custom-chat-header button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-  /* Chat Iframe Area */
-  #custom-chat-frame {
-    border: none;
-    width: 100%;
-    height: 100%;
-    background: #f5f5f5;
-  }
+        /* Chat Iframe Area */
+        #custom-chat-frame {
+            border: none;
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+        }
 
-  /* Loading state */
-  .chat-loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: #666;
-  }
-</style>
+        /* Loading state */
+        .chat-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your main website content goes here -->
+    <div class="container">
+        <!-- Your existing website content -->
+    </div>
 
-<!-- Botpress Scripts -->
-<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
-<script src="https://files.bpcontent.cloud/2025/09/08/10/20250908104323-DCJLJRV2.js" defer></script>
+    <!-- Chatbot HTML Structure -->
+    <div id="chatbot-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+    </div>
 
-<!-- Chatbot HTML Structure -->
-<div id="chatbot-icon">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-  </svg>
-</div>
+    <div id="custom-chat-container">
+        <div id="custom-chat-header">
+            <span>Chat Assistant</span>
+            <button id="close-chat">&times;</button>
+        </div>
+        <iframe id="custom-chat-frame" src="about:blank"></iframe>
+    </div>
 
-<div id="custom-chat-container">
-  <div id="custom-chat-header">
-    <span>Chat Assistant</span>
-    <button id="close-chat">&times;</button>
-  </div>
-  <iframe id="custom-chat-frame" src="about:blank"></iframe>
-</div>
+    <!-- Botpress Scripts -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/09/08/10/20250908104323-DCJLJRV2.js" defer></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Section Navigation Functionality
-  const navLinks = document.querySelectorAll('.nav-link');
-  const quickLinks = document.querySelectorAll('.quick-link-card');
-  const contactBtn = document.querySelector('.contact-btn');
-  const showcaseLink = document.querySelector('.showcase-link');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Section Navigation Functionality
+            const navLinks = document.querySelectorAll('.nav-link');
+            const quickLinks = document.querySelectorAll('.quick-link-card');
+            const contactBtn = document.querySelector('.contact-btn');
+            const showcaseLink = document.querySelector('.showcase-link');
 
-  function showSection(sectionId) {
-    document.querySelectorAll('.content-section').forEach(section => {
-      section.classList.remove('active');
-    });
-    
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-      targetSection.classList.add('active');
-    }
+            function showSection(sectionId) {
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('data-target') === sectionId) {
-        link.classList.add('active');
-      }
-    });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-target') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
 
-    const container = document.querySelector('.container');
-    if (container) {
-      container.scrollTop = 0;
-    }
-  }
+                const container = document.querySelector('.container');
+                if (container) {
+                    container.scrollTop = 0;
+                }
+            }
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = this.getAttribute('data-target');
-      if (target) {
-        showSection(target);
-      }
-    });
-  });
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('data-target');
+                    if (target) {
+                        showSection(target);
+                    }
+                });
+            });
 
-  quickLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const target = this.getAttribute('data-target');
-      if (target) {
-        showSection(target);
-      }
-    });
-  });
+            quickLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    if (target) {
+                        showSection(target);
+                    }
+                });
+            });
 
-  if (contactBtn) {
-    contactBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      showSection('contact');
-    });
-  }
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showSection('contact');
+                });
+            }
 
-  if (showcaseLink) {
-    showcaseLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      showSection('showcase');
-    });
-  }
+            if (showcaseLink) {
+                showcaseLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showSection('showcase');
+                });
+            }
 
-  // Chatbot toggle functionality
-  const chatbotIcon = document.getElementById('chatbot-icon');
-  const chatContainer = document.getElementById('custom-chat-container');
-  const closeChat = document.getElementById('close-chat');
-  const chatFrame = document.getElementById('custom-chat-frame');
+            // Chatbot toggle functionality
+            const chatbotIcon = document.getElementById('chatbot-icon');
+            const chatContainer = document.getElementById('custom-chat-container');
+            const closeChat = document.getElementById('close-chat');
+            const chatFrame = document.getElementById('custom-chat-frame');
 
-  if (!chatbotIcon || !chatContainer || !closeChat || !chatFrame) {
-    console.error('Chatbot elements not found');
-    return;
-  }
+            if (!chatbotIcon || !chatContainer || !closeChat || !chatFrame) {
+                console.error('Chatbot elements not found');
+                return;
+            }
 
-  // Hide default Botpress widget
-  const hideBotpressWidget = setInterval(function() {
-    const bpWidgets = document.querySelectorAll('.bp-widget-widget, .bp-widget-side-button');
-    if (bpWidgets.length > 0) {
-      bpWidgets.forEach(widget => {
-        widget.style.display = 'none';
-        widget.style.visibility = 'hidden';
-      });
-      clearInterval(hideBotpressWidget);
-    }
-  }, 100);
+            // Hide default Botpress widget
+            const hideBotpressWidget = setInterval(function() {
+                const bpWidgets = document.querySelectorAll('.bp-widget-widget, .bp-widget-side-button');
+                if (bpWidgets.length > 0) {
+                    bpWidgets.forEach(widget => {
+                        widget.style.display = 'none';
+                        widget.style.visibility = 'hidden';
+                    });
+                    clearInterval(hideBotpressWidget);
+                }
+            }, 100);
 
-  // Stop hiding after 5 seconds to avoid infinite loop
-  setTimeout(() => {
-    clearInterval(hideBotpressWidget);
-  }, 5000);
+            // Stop hiding after 5 seconds to avoid infinite loop
+            setTimeout(() => {
+                clearInterval(hideBotpressWidget);
+            }, 5000);
 
-  // Toggle chat window
-  chatbotIcon.addEventListener('click', function() {
-    if (chatContainer.style.display === 'flex') {
-      chatContainer.style.display = 'none';
-    } else {
-      chatContainer.style.display = 'flex';
-      // Use the correct Botpress webchat URL
-      if (chatFrame.src === 'about:blank') {
-        chatFrame.src = 'https://cdn.botpress.cloud/webchat/v3.3/webchat.html';
-      }
-    }
-  });
+            // Toggle chat window
+            chatbotIcon.addEventListener('click', function() {
+                if (chatContainer.style.display === 'flex') {
+                    chatContainer.style.display = 'none';
+                } else {
+                    chatContainer.style.display = 'flex';
+                    // Use the correct Botpress webchat URL
+                    if (chatFrame.src === 'about:blank') {
+                        chatFrame.src = 'https://cdn.botpress.cloud/webchat/v3.3/webchat.html';
+                    }
+                }
+            });
 
-  // Close chat window
-  closeChat.addEventListener('click', function() {
-    chatContainer.style.display = 'none';
-  });
+            // Close chat window
+            closeChat.addEventListener('click', function() {
+                chatContainer.style.display = 'none';
+            });
 
-  // Close chat when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!chatContainer.contains(event.target) && 
-        !chatbotIcon.contains(event.target) && 
-        chatContainer.style.display === 'flex') {
-      chatContainer.style.display = 'none';
-    }
-  });
+            // Close chat when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!chatContainer.contains(event.target) && 
+                    !chatbotIcon.contains(event.target) && 
+                    chatContainer.style.display === 'flex') {
+                    chatContainer.style.display = 'none';
+                }
+            });
 
-  // Handle iframe loading states
-  chatFrame.addEventListener('load', function() {
-    chatFrame.style.background = 'transparent';
-  });
+            // Handle iframe loading states
+            chatFrame.addEventListener('load', function() {
+                chatFrame.style.background = 'transparent';
+            });
 
-  chatFrame.addEventListener('error', function() {
-    chatFrame.innerHTML = '<div class="chat-loading">Failed to load chat. Please try again.</div>';
-  });
-});
-</script>
+            chatFrame.addEventListener('error', function() {
+                chatFrame.innerHTML = '<div class="chat-loading">Failed to load chat. Please try again.</div>';
+            });
+        });
+    </script>
+</body>
+</html>

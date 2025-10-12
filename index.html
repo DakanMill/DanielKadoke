@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Daniel Kadoke </title>
+  <title>Portfolio - Daniel Kadoke Nyakwela</title>
   <style>
     :root {
       --primary: #50fa7b;
@@ -26,6 +26,8 @@
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: var(--light);
       line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
     }
     
     header {
@@ -125,7 +127,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
-      min-height: 70vh;
+      min-height: calc(100vh - 400px);
     }
     
     /* Section Management */
@@ -532,7 +534,7 @@
       margin-top: 2rem;
     }
     
-   /* Chatbot Styles */
+    /* Chatbot Styles */
     #chatbot-icon {
       position: fixed;
       bottom: 20px;
@@ -607,8 +609,6 @@
       flex-grow: 1;
       border: none;
     }
-    
-
     
     /* Home Section */
     .home-content {
@@ -757,7 +757,7 @@
     <section id="home" class="content-section active">
       <div class="home-content">
         <h2>Welcome to My Portfolio</h2>
-        <p>Explore my academic journey and online learning through the “GRAPH Course” at the University of Geneva. I’ve completed R programming training and am finishing Generative AI studies. This portfolio highlights my projects, skills, data analysis, research, and experience in AI and Biostatistics..</p>
+        <p>Explore my academic journey and online learning through the "GRAPH Course" at the University of Geneva. I've completed R programming training and am finishing Generative AI studies. This portfolio highlights my projects, skills, data analysis, research, and experience in AI and Biostatistics.</p>
         
         <div class="quick-links">
           <div class="quick-link-card" data-target="about-me">
@@ -788,8 +788,8 @@
         <img src="https://github.com/Dakan94/graph-ai-portfolio/raw/main/Profile%20pic.jpg" alt="Daniel N. Kadoke" class="about-profile-picture">
         <div class="about-text">
           <h3>My Profile</h3>
-          <p>Hi, I’m Daniel. I’m currently pursuing a Master’s degree in Biostatistics at the University of Abomey-Calavi, building on my background in Mathematics and Statistics. I have strong expertise in data analysis and interpretation, with proficiency in R, MATLAB, Stata, and SPSS.</p>
-          <p>I’m driven by a passion for using data to solve real-world problems, especially in research and public health. My training in Biostatistics has honed my ability to turn complex datasets into meaningful, actionable insights. I’m always open to conversations feel free to reach out to discuss about data analysis and collaboration opportunities.</p>
+          <p>Hi, I'm Daniel. I'm currently pursuing a Master's degree in Biostatistics at the University of Abomey-Calavi, building on my background in Mathematics and Statistics. I have strong expertise in data analysis and interpretation, with proficiency in R, MATLAB, Stata, and SPSS.</p>
+          <p>I'm driven by a passion for using data to solve real-world problems, especially in research and public health. My training in Biostatistics has honed my ability to turn complex datasets into meaningful, actionable insights. I'm always open to conversations feel free to reach out to discuss about data analysis and collaboration opportunities.</p>
         </div>
       </div>
       
@@ -802,25 +802,26 @@
         
         <div class="card">
           <h3>Personal Philosophy</h3>
-  <p>Think about this: I'm a Biostatistician by profession, which means I live in the world of numbers, patterns, and evidence. My day job is to untangle complex health data like the results of a clinical trial or patterns in disease spread and translate it into clear, meaningful stories that can save lives and shape better health policies. I see the hidden narratives hidden inside spreadsheets and databases.</p>
-  
-  <p>But my curiosity doesn't switch off when I leave my work desk.</p>
-  
-  <p>My deeper, personal passion is understanding a different kind of complex system: human beings.</p>
-  
-  <p>I am fascinated by what makes people tick, like why we communicate the way we do, why some conversations turn needlessly rude, and how we can choose empathy over anger. I believe that the same skills I use as a statistician to do observation, pattern recognition, and seeking truth apply to understanding human interactions.</p>
-  
-  <p>You'll often find me:</p>
-  <ul>
-    <li>Thinking deeply about why "hurt people hurt people."</li>
-    <li>Valuing quiet, meaningful conversations over loud, superficial debates.</li>
-    <li>Choosing silence not out of fear, but as a conscious strategy to avoid negativity and maintain my peace.</li>
-  </ul>
-  
-  <p>In a world that often mistakes loudness for strength, I find power in calmness. I am drawn to the idea of quiet leadership: influencing others not through authority, but through patience, deep listening, and emotional intelligence.</p>
-  
-  <p>So, whether I'm analyzing data to improve public health or reflecting on how to navigate a difficult conversation, my goal is the same: to bring clarity, understanding, and a positive impact one number, and one interaction, at a time.</p>
-</div>
+          <p>Think about this: I'm a Biostatistician by profession, which means I live in the world of numbers, patterns, and evidence. My day job is to untangle complex health data like the results of a clinical trial or patterns in disease spread and translate it into clear, meaningful stories that can save lives and shape better health policies. I see the hidden narratives hidden inside spreadsheets and databases.</p>
+          
+          <p>But my curiosity doesn't switch off when I leave my work desk.</p>
+          
+          <p>My deeper, personal passion is understanding a different kind of complex system: human beings.</p>
+          
+          <p>I am fascinated by what makes people tick, like why we communicate the way we do, why some conversations turn needlessly rude, and how we can choose empathy over anger. I believe that the same skills I use as a statistician to do observation, pattern recognition, and seeking truth apply to understanding human interactions.</p>
+          
+          <p>You'll often find me:</p>
+          <ul>
+            <li>Thinking deeply about why "hurt people hurt people."</li>
+            <li>Valuing quiet, meaningful conversations over loud, superficial debates.</li>
+            <li>Choosing silence not out of fear, but as a conscious strategy to avoid negativity and maintain my peace.</li>
+          </ul>
+          
+          <p>In a world that often mistakes loudness for strength, I find power in calmness. I am drawn to the idea of quiet leadership: influencing others not through authority, but through patience, deep listening, and emotional intelligence.</p>
+          
+          <p>So, whether I'm analyzing data to improve public health or reflecting on how to navigate a difficult conversation, my goal is the same: to bring clarity, understanding, and a positive impact one number, and one interaction, at a time.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Education Section -->
@@ -1164,247 +1165,157 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Daniel Kadoke Nyakwela | Professional & Research Portfolio</p>
-    <p>&copy; Email:nyakweladani@gmail.com</p>
-    <p>&copy; Karibu Sana | Welcome</p>
+    <p>Email: nyakweladani@gmail.com</p>
+    <p>Karibu Sana | Welcome</p>
   </footer>
 
-<!-- Chatbot Floating Icon CSS -->
-    <style>
-        /* Chatbot Floating Icon */
-        #chatbot-icon {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #007bff;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            z-index: 1000;
-        }
+  <!-- Chatbot HTML Structure -->
+  <div id="chatbot-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+  </div>
 
-        #chatbot-icon svg {
-            fill: #fff;
-            width: 30px;
-            height: 30px;
-        }
-
-        #chatbot-icon:hover {
-            background-color: #0056b3;
-            transform: scale(1.1);
-        }
-
-        /* Custom Chat Container */
-        #custom-chat-container {
-            position: fixed;
-            bottom: 90px;  /* just above the icon */
-            right: 25px;
-            width: 350px;
-            height: 450px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            display: none; /* hidden by default */
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 1001;
-        }
-
-        /* Chat Header */
-        #custom-chat-header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 12px;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #custom-chat-header button {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        /* Chat Iframe Area */
-        #custom-chat-frame {
-            border: none;
-            width: 100%;
-            height: 100%;
-            background: #f5f5f5;
-        }
-
-        /* Loading state */
-        .chat-loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <!-- Your main website content goes here -->
-    <div class="container">
-        <!-- Your existing website content -->
+  <div id="custom-chat-container">
+    <div id="custom-chat-header">
+      <span>Chat Assistant</span>
+      <button id="close-chat">&times;</button>
     </div>
+    <iframe id="custom-chat-frame" src="about:blank"></iframe>
+  </div>
 
-    <!-- Chatbot HTML Structure -->
-    <div id="chatbot-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-        </svg>
-    </div>
+  <!-- Botpress Scripts -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
+  <script src="https://files.bpcontent.cloud/2025/09/08/10/20250908104323-DCJLJRV2.js" defer></script>
 
-    <div id="custom-chat-container">
-        <div id="custom-chat-header">
-            <span>Chat Assistant</span>
-            <button id="close-chat">&times;</button>
-        </div>
-        <iframe id="custom-chat-frame" src="about:blank"></iframe>
-    </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Section Navigation Functionality
+      const navLinks = document.querySelectorAll('.nav-link');
+      const quickLinks = document.querySelectorAll('.quick-link-card');
+      const contactBtn = document.querySelector('.contact-btn');
+      const showcaseLink = document.querySelector('.showcase-link');
 
-    <!-- Botpress Scripts -->
-    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
-    <script src="https://files.bpcontent.cloud/2025/09/08/10/20250908104323-DCJLJRV2.js" defer></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Section Navigation Functionality
-            const navLinks = document.querySelectorAll('.nav-link');
-            const quickLinks = document.querySelectorAll('.quick-link-card');
-            const contactBtn = document.querySelector('.contact-btn');
-            const showcaseLink = document.querySelector('.showcase-link');
-
-            function showSection(sectionId) {
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                
-                const targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                }
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-target') === sectionId) {
-                        link.classList.add('active');
-                    }
-                });
-
-                const container = document.querySelector('.container');
-                if (container) {
-                    container.scrollTop = 0;
-                }
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = this.getAttribute('data-target');
-                    if (target) {
-                        showSection(target);
-                    }
-                });
-            });
-
-            quickLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const target = this.getAttribute('data-target');
-                    if (target) {
-                        showSection(target);
-                    }
-                });
-            });
-
-            if (contactBtn) {
-                contactBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showSection('contact');
-                });
-            }
-
-            if (showcaseLink) {
-                showcaseLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showSection('showcase');
-                });
-            }
-
-            // Chatbot toggle functionality
-            const chatbotIcon = document.getElementById('chatbot-icon');
-            const chatContainer = document.getElementById('custom-chat-container');
-            const closeChat = document.getElementById('close-chat');
-            const chatFrame = document.getElementById('custom-chat-frame');
-
-            if (!chatbotIcon || !chatContainer || !closeChat || !chatFrame) {
-                console.error('Chatbot elements not found');
-                return;
-            }
-
-            // Hide default Botpress widget
-            const hideBotpressWidget = setInterval(function() {
-                const bpWidgets = document.querySelectorAll('.bp-widget-widget, .bp-widget-side-button');
-                if (bpWidgets.length > 0) {
-                    bpWidgets.forEach(widget => {
-                        widget.style.display = 'none';
-                        widget.style.visibility = 'hidden';
-                    });
-                    clearInterval(hideBotpressWidget);
-                }
-            }, 100);
-
-            // Stop hiding after 5 seconds to avoid infinite loop
-            setTimeout(() => {
-                clearInterval(hideBotpressWidget);
-            }, 5000);
-
-            // Toggle chat window
-            chatbotIcon.addEventListener('click', function() {
-                if (chatContainer.style.display === 'flex') {
-                    chatContainer.style.display = 'none';
-                } else {
-                    chatContainer.style.display = 'flex';
-                    // Use the correct Botpress webchat URL
-                    if (chatFrame.src === 'about:blank') {
-                        chatFrame.src = 'https://cdn.botpress.cloud/webchat/v3.3/webchat.html';
-                    }
-                }
-            });
-
-            // Close chat window
-            closeChat.addEventListener('click', function() {
-                chatContainer.style.display = 'none';
-            });
-
-            // Close chat when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!chatContainer.contains(event.target) && 
-                    !chatbotIcon.contains(event.target) && 
-                    chatContainer.style.display === 'flex') {
-                    chatContainer.style.display = 'none';
-                }
-            });
-
-            // Handle iframe loading states
-            chatFrame.addEventListener('load', function() {
-                chatFrame.style.background = 'transparent';
-            });
-
-            chatFrame.addEventListener('error', function() {
-                chatFrame.innerHTML = '<div class="chat-loading">Failed to load chat. Please try again.</div>';
-            });
+      function showSection(sectionId) {
+        document.querySelectorAll('.content-section').forEach(section => {
+          section.classList.remove('active');
         });
-    </script>
+        
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.classList.add('active');
+        }
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('data-target') === sectionId) {
+            link.classList.add('active');
+          }
+        });
+
+        const container = document.querySelector('.container');
+        if (container) {
+          container.scrollTop = 0;
+        }
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = this.getAttribute('data-target');
+          if (target) {
+            showSection(target);
+          }
+        });
+      });
+
+      quickLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          const target = this.getAttribute('data-target');
+          if (target) {
+            showSection(target);
+          }
+        });
+      });
+
+      if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          showSection('contact');
+        });
+      }
+
+      if (showcaseLink) {
+        showcaseLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          showSection('showcase');
+        });
+      }
+
+      // Chatbot toggle functionality
+      const chatbotIcon = document.getElementById('chatbot-icon');
+      const chatContainer = document.getElementById('custom-chat-container');
+      const closeChat = document.getElementById('close-chat');
+      const chatFrame = document.getElementById('custom-chat-frame');
+
+      if (!chatbotIcon || !chatContainer || !closeChat || !chatFrame) {
+        console.error('Chatbot elements not found');
+        return;
+      }
+
+      // Hide default Botpress widget
+      const hideBotpressWidget = setInterval(function() {
+        const bpWidgets = document.querySelectorAll('.bp-widget-widget, .bp-widget-side-button');
+        if (bpWidgets.length > 0) {
+          bpWidgets.forEach(widget => {
+            widget.style.display = 'none';
+            widget.style.visibility = 'hidden';
+          });
+          clearInterval(hideBotpressWidget);
+        }
+      }, 100);
+
+      // Stop hiding after 5 seconds to avoid infinite loop
+      setTimeout(() => {
+        clearInterval(hideBotpressWidget);
+      }, 5000);
+
+      // Toggle chat window
+      chatbotIcon.addEventListener('click', function() {
+        if (chatContainer.style.display === 'flex') {
+          chatContainer.style.display = 'none';
+        } else {
+          chatContainer.style.display = 'flex';
+          // Use the correct Botpress webchat URL
+          if (chatFrame.src === 'about:blank') {
+            chatFrame.src = 'https://cdn.botpress.cloud/webchat/v3.3/webchat.html';
+          }
+        }
+      });
+
+      // Close chat window
+      closeChat.addEventListener('click', function() {
+        chatContainer.style.display = 'none';
+      });
+
+      // Close chat when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!chatContainer.contains(event.target) && 
+            !chatbotIcon.contains(event.target) && 
+            chatContainer.style.display === 'flex') {
+          chatContainer.style.display = 'none';
+        }
+      });
+
+      // Handle iframe loading states
+      chatFrame.addEventListener('load', function() {
+        chatFrame.style.background = 'transparent';
+      });
+
+      chatFrame.addEventListener('error', function() {
+        chatFrame.innerHTML = '<div class="chat-loading">Failed to load chat. Please try again.</div>';
+      });
+    });
+  </script>
 </body>
 </html>

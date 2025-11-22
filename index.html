@@ -1152,14 +1152,95 @@
       </div>
     </section>
 
-    <!-- Showcase Section -->
-    <section id="showcase" class="content-section">
-      <h2 class="section-title">Upcoming Event</h2>
-      <div class="showcase">
+<!-- Showcase Section -->
+<section id="showcase" class="content-section">
+  <h2 class="section-title">Upcoming Events</h2>
+  <div class="showcase-container">
+    <div class="showcase-grid">
+      <!-- Event 1 -->
+      <div class="event-card">
+        <h3>AI Project Showcase</h3>
         <p>Join us for the upcoming showcase event where projects from the Generative AI for Work & Research course will be presented.</p>
-        <img src="https://github.com/Dakan94/graph-ai-portfolio/blob/main/The%20GRAPH%20Showcase.png?raw=true" alt="The GRAPH Showcase Flyer">
+        <img src="https://github.com/DakanMill/DanielKadoke/edit/main/The%20GRAPH%20Showcase.png?raw=true" alt="The GRAPH Showcase Flyer">
+        <div class="event-date">March 15, 2024</div>
       </div>
-    </section>
+      
+      <!-- Event 2 -->
+      <div class="event-card">
+        <h3>Tech Conference 2024</h3>
+        <p>Presenting my latest research on AI applications in modern workplaces.</p>
+        <img src="path-to-your-image2.jpg" alt="Tech Conference">
+        <div class="event-date">April 20, 2024</div>
+      </div>
+      
+      <!-- Event 3 -->
+      <div class="event-card">
+        <h3>Workshop: AI Tools</h3>
+        <p>Hands-on workshop demonstrating practical AI tools for daily tasks.</p>
+        <img src="path-to-your-image3.jpg" alt="AI Workshop">
+        <div class="event-date">May 5, 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.showcase-container {
+  width: 100%;
+  max-width: 1200px; /* Much wider container */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.event-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.event-card p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.event-date {
+  background: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #555;
+  display: inline-block;
+}
+</style>
   </div>
 
   <!-- Footer -->
